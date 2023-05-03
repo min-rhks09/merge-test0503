@@ -170,4 +170,20 @@ C:\apps\main_project>git log --oneline --branches --graph
 * 8dcc9be (HEAD -> login, register, main) second
 * 7c8cbc6 first
 
-C:\apps\main_project>
+
+-깃허브에 브랜치 커밋 
+C:\apps\main_project>git add .
+
+C:\apps\main_project>git commit -m "edit register"
+[main 0202626] edit register
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+C:\apps\main_project>git push -u origin register
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'register' on GitHub by visiting:
+remote:      https://github.com/min-rhks09/merge-test0503/pull/new/register
+remote:
+To https://github.com/min-rhks09/merge-test0503.git
+ * [new branch]      register -> register
+branch 'register' set up to track 'origin/register'.
