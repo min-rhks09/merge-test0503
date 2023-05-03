@@ -1,1 +1,173 @@
 second!
+
+Microsoft Windows [Version 10.0.19044.2846]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Model>C
+'C'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+C:\Users\Model>
+
+C:\Users\Model>C
+
+C:\Users\Model>cd
+C:\Users\Model
+
+C:\Users\Model>cd
+C:\Users\Model
+
+C:\Users\Model>cd..
+
+C:\Users>cd...
+
+C:\Users>cd..
+
+C:\>cd apps
+
+C:\apps>cd git_test
+
+C:\apps\git_test>git init
+Reinitialized existing Git repository in C:/apps/git_test/.git/
+
+C:\apps\git_test>dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: B24E-6946
+
+ C:\apps\git_test 디렉터리
+
+2023-05-02  오후 05:06    <DIR>          .
+2023-05-02  오후 05:06    <DIR>          ..
+2023-05-02  오후 05:20                58 test.txt
+               1개 파일                  58 바이트
+               2개 디렉터리  163,055,300,608 바이트 남음
+
+C:\apps\git_test>code
+
+C:\apps\git_test>git add .
+
+C:\apps\git_test>git commit -m "test_1.txt add"
+[master e033804] test_1.txt add
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 test_1.txt
+
+C:\apps\git_test>git branch -M main
+
+C:\apps\git_test>git remote add origin https://github.com/min-rhks09/0502_test.git
+
+C:\apps\git_test>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (10/10), 798 bytes | 798.00 KiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/min-rhks09/0502_test.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\apps\git_test>git remote -v
+origin  https://github.com/min-rhks09/0502_test.git (fetch)
+origin  https://github.com/min-rhks09/0502_test.git (push)
+
+C:\apps\git_test>git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 5.94 KiB | 243.00 KiB/s, done.
+From https://github.com/min-rhks09/0502_test
+   e033804..7a15bd8  main       -> origin/main
+Updating e033804..7a15bd8
+Fast-forward
+ README.md |   3 ++
+ test.txt  | 122 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 125 insertions(+)
+ create mode 100644 README.md
+
+C:\apps\git_test>cd /
+
+C:\>mkdir git_home
+
+C:\>cd git_home
+
+C:\git_home>git clone https://github.com/min-rhks09/0502_test.git
+Cloning into '0502_test'...
+remote: Enumerating objects: 25, done.
+remote: Counting objects: 100% (25/25), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 25 (delta 3), reused 16 (delta 1), pack-reused 0
+Receiving objects: 100% (25/25), 9.65 KiB | 4.83 MiB/s, done.
+Resolving deltas: 100% (3/3), done.
+
+C:\git_home>code
+
+C:\git_home>cd..
+
+C:\>cd apps
+
+C:\apps>mkdir mian_project && cd main_project
+지정된 경로를 찾을 수 없습니다.
+
+C:\apps>mkdir main_project
+
+C:\apps>cd main_project
+
+C:\apps\main_project>git init
+Initialized empty Git repository in C:/apps/main_project/.git/
+
+C:\apps\main_project>code
+
+C:\apps\main_project>git log -- oneline
+
+C:\apps\main_project>git log--oneline
+git: 'log--oneline' is not a git command. See 'git --help'.
+
+C:\apps\main_project>git log --oneline
+7c8cbc6 (HEAD -> main) first
+
+C:\apps\main_project>git add .
+
+C:\apps\main_project>git commit -m "second"
+[main 8dcc9be] second
+ 1 file changed, 1 insertion(+)
+ create mode 100644 second.txt
+
+C:\apps\main_project>git log
+commit 8dcc9be3b1722638d29c32c6d561550ca1a0bf81 (HEAD -> main)
+Author: min <220805min@gmail.com>
+Date:   Wed May 3 16:02:23 2023 +0900
+
+    second
+
+commit 7c8cbc604735cb439c9bd28fcd135487088cb22a
+Author: min <220805min@gmail.com>
+Date:   Wed May 3 16:00:24 2023 +0900
+
+    first
+
+C:\apps\main_project>git log --oneline --branches --graph
+* 8dcc9be (HEAD -> main) second
+* 7c8cbc6 first
+
+C:\apps\main_project>git branch login
+
+C:\apps\main_project>git log --oneline --branches --graph
+* 8dcc9be (HEAD -> main, login) second
+* 7c8cbc6 first
+
+C:\apps\main_project>git branch register
+
+C:\apps\main_project>git log --oneline --branches --graph
+* 8dcc9be (HEAD -> main, register, login) second
+* 7c8cbc6 first
+
+C:\apps\main_project>git checkout login
+Switched to branch 'login'
+
+C:\apps\main_project>git log --oneline --branches --graph
+* 8dcc9be (HEAD -> login, register, main) second
+* 7c8cbc6 first
+
+C:\apps\main_project>

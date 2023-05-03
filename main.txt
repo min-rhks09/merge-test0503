@@ -1,1 +1,4 @@
 main
+
+git checkout - branch 이동
+git branch ****** - branch 생성
